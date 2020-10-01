@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cortezhac.greendaoaplication.MainActivity">
+    <item
+        android:id="@+id/MenuLimpiar"
+        android:orderInCategory="100"
+        android:title="@string/MenuLimpiar"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/MenuListarSpin"
+        android:title="@string/MenuListarSpin" />
+    <item
+        android:id="@+id/MenuListaListar"
+        android:title="@string/MenuListarList" />
+    <item
+        android:id="@+id/MenuRecycler"
+        android:title="@string/MenuListarRecy" />
+    <item
+        android:id="@+id/MenuAcercade"
+        android:title="@string/info" />
+</menu>

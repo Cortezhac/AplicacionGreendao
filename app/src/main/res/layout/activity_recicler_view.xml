@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReciclerViewActivity"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ReciclerProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu_fab_size="normal">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/Recycle_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back"
+            app:backgroundTint="@color/colorPrincipal"
+            app:backgroundTintMode="multiply"
+            app:borderWidth="0dp"
+            app:fab_label="Regresar"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/Recycle_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#273B9E"
+            android:src="@drawable/ic_baseline_supervised_user_circle_24"
+            android:tint="#FFFFFF"
+            app:backgroundTint="@color/colorPrincipal"
+            app:borderWidth="0dp"
+            app:fab_label="Autor"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/Recycle_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrincipal"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            android:tint="@color/colorPrincipal"
+            app:backgroundTint="@color/colorPrincipal"
+            app:borderWidth="0dp"
+            app:fab_label="Salir"
+            app:fab_size="mini"
+            tools:src="@drawable/ic_baseline_exit_to_app" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+</androidx.constraintlayout.widget.ConstraintLayout>

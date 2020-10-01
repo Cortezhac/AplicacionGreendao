@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Aplicacion Green DAO</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="contenMain_descripcionLogo">Imagen represetativa del PC Master Race</string>
+    <string name="contentMain_guardar">Guardar</string>
+    <string name="contentMain_btnConsultarCodigo">Consultar por codigo</string>
+    <string name="contentMain_btnBuscarDecrip">Buscar por descripcion</string>
+    <string name="contentMain_btnBorrar">Eliminar</string>
+    <string name="contentMain_btnEditar">Editar</string>
+    <string name="Decimal">0.00</string>
+    <string name="Codigo">0000</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="SpinnerCodigo">Codigo :</string>
+    <string name="SpinnerDescrip">Descripcion :</string>
+    <string name="SpinnerPrecio">Precio :</string>
+    <string name="Null">Sin datos</string>
+    <string name="MenuLimpiar">Limpiar</string>
+    <string name="MenuListarSpin">Listar Spinner</string>
+    <string name="MenuListarList">Listar todo</string>
+    <string name="FlotanteCodigo">Codigo Producto</string>
+    <string name="DescrpcionbtnSalir">Imagen exit</string>
+    <string name="MenuListarRecy">Listar Recycler</string>
+    <string name="info">Acerca de</string>
+    <string name="back">Volver</string>
+    <string name="nombreCreador">Nombre</string>
+    <string name="infoadicional">Informacion adicional</string>
+    <string name="acercaDeNombre">Irvin Alberto Cortez Guardado</string>
+    <string name="masInfo">Estudia en ITCA FEPADE Zacatecoluca \nCarnet: 184319</string>
+    <string name="Iconosbarra">Iconos</string>
+</resources>

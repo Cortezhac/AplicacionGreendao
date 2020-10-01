@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        applicationId "com.cortezhac.greendaoaplication"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    greendao {
+        schemaVersion 1
+        daoPackage "greendao" // NOmbre de carpeta generada (ubicacion java[generated])
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation "androidx.recyclerview:recyclerview:1.1.0" // recycler view
+    implementation 'org.greenrobot:greendao:3.3.0' // add library
+    implementation 'com.github.fafaldo:fab-toolbar:1.2.0'// add library toolbar en boton flotante
+    //implementation 'com.getbase:floatingactionbutton:1.10.1' // add library
+    implementation 'com.github.clans:fab:1.6.4'// add library para botones flotates
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}

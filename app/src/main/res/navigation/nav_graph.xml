@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation4">
+
+    <navigation android:id="@+id/navigation6"
+        app:startDestination="@id/navigation5">
+        <navigation
+            android:id="@+id/navigation5"
+            app:startDestination="@id/navigation4">
+            <navigation
+                android:id="@+id/navigation4"
+                app:startDestination="@id/navigation3">
+                <navigation
+                    android:id="@+id/navigation3"
+                    app:startDestination="@id/navigation2">
+                    <navigation
+                        android:id="@+id/navigation2"
+                        app:startDestination="@id/navigation">
+                        <navigation
+                            android:id="@+id/navigation"
+                            app:startDestination="@id/FirstFragment">
+                            <fragment
+                                android:id="@+id/FirstFragment"
+                                android:name="com.cortezhac.greendaoaplication.FirstFragment"
+                                android:label="@string/first_fragment_label"
+                                tools:layout="@layout/fragment_first">
+
+                                <action
+                                    android:id="@+id/action_FirstFragment_to_SecondFragment"
+                                    app:destination="@id/navigation9" />
+                            </fragment>
+                        </navigation>
+                    </navigation>
+                </navigation>
+            </navigation>
+        </navigation>
+    </navigation>
+    <navigation android:id="@+id/navigation9"
+        app:startDestination="@id/navigation8">
+        <navigation
+            android:id="@+id/navigation8"
+            app:startDestination="@id/navigation7">
+            <navigation
+                android:id="@+id/navigation7"
+                app:startDestination="@id/SecondFragment">
+                <fragment
+                    android:id="@+id/SecondFragment"
+                    android:name="com.cortezhac.greendaoaplication.SecondFragment"
+                    android:label="@string/second_fragment_label"
+                    tools:layout="@layout/fragment_second">
+
+                    <action
+                        android:id="@+id/action_SecondFragment_to_FirstFragment"
+                        app:destination="@id/navigation6" />
+                </fragment>
+            </navigation>
+        </navigation>
+    </navigation>
+</navigation>

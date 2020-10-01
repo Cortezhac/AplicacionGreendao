@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <!--
+            app:menu diseño de menu XML
+        -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:menu="@menu/menu_main"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:subtitle="Creado por Irvin Cortez"
+            app:title="CRUD greendao" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+        android:id="@+id/fab_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:containerId="@id/fab_toolbar_container"
+        app:fabId="@id/fab"
+        app:fabToolbarId="@id/fab_toolbar_toolbar"
+        app:fadeInFraction="0.2"
+        app:hideDuration="600"
+        app:horizontalMargin="16dp"
+        app:showDuration="600"
+        app:verticalMargin="16dp">
+
+        <RelativeLayout
+            android:id="@+id/fab_toolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|end">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="consultarCodigo"
+                app:backgroundTint="#000000"
+                app:srcCompat="@drawable/fab_add"
+                app:tint="#FFFFFF"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/fab_toolbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="#000000"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/fabtres"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_search_24"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/fabdos"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_assignment_24"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/fabcinco"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_save_24"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/fabcuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_delete_forever_24"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/fabuno"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_edit_24"
+                app:tint="#FFFFFF" />
+
+            <ImageView
+                android:id="@+id/fabseis"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:contentDescription="@string/Iconosbarra"
+                android:padding="10dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+                app:tint="#FFFFFF" />
+
+        </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

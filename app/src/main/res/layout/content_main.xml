@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <!--<fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_graph" /> -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBase"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/contenMain_descripcionLogo"
+            app:srcCompat="@drawable/png_clipart_pc_master_race_computer_cases_housings_personal_computer_game_maize_miscellaneous_game"
+            tools:srcCompat="@drawable/png_clipart_pc_master_race_computer_cases_housings_personal_computer_game_maize_miscellaneous_game" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBasePaguina"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/contentMain_editIdCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_edit_text_personalizado"
+                android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/Codigo"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:padding="10sp" />
+
+            <EditText
+                android:id="@+id/contentMain_editDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_edit_text_personalizado"
+                android:drawableStart="@drawable/ic_baseline_description_24"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/descripcion"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:padding="10sp" />
+
+            <EditText
+                android:id="@+id/contentMain_editPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/ic_edit_text_personalizado"
+                android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="@string/Decimal"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:padding="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorBasePaguina"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <Button
+                android:id="@+id/contentMain_btnGuardar"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="165dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_botones_personalizados"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:onClick="guardar"
+                android:text="@string/contentMain_guardar"
+                android:textColor="#FFFFFF" />
+            <!--
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/contentMain_btnConsCodigo"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_botones_personalizados"
+        android:onClick="consultarCodigo"
+        android:text="@string/contentMain_btnConsultarCodigo"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
+
+<Button
+    android:id="@+id/contentMain_btnConsDes"
+    style="@style/Widget.AppCompat.Button.Colored"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/ic_botones_personalizados"
+    android:onClick="consultarDescripcion"
+    android:text="@string/contentMain_btnBuscarDecrip"
+    android:textColor="#FFFFFF" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/contentMain_btnEliminar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_botones_personalizados"
+        android:onClick="eliminar"
+        android:text="@string/contentMain_btnBorrar"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/contentMain_btnEditar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1"
+        android:background="@drawable/ic_botones_personalizados"
+        android:onClick="modificar"
+        android:text="@string/contentMain_btnEditar"
+        android:textColor="#FFFFFF" />
+</LinearLayout>
+-->
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
